@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sweat Roulette</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
+
+    <style>
+
+      html,
+      body{
+        margin:0;
+        padding:0;
+        font-family: 'Oxygen', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        color: #22313F;
+        font-size: 20px;
+      }
+
+      .header{
+        width:100%;
+        text-align: center;
+        border-bottom: 1px solid #6BB9F0;
+        padding: 0 0 8px;
+        overflow: hidden;
+      }
+
+      h1, h2 {
+        margin: 10px 0;
+        text-decoration: none;
+        font-weight: normal;
+      }
+
+      #sweat_roulette {
+        text-align: center;
+        font-size: 40px;
+        padding:20px;
+      }
+
+      #sweat_roulette > h1 {
+        font-weight: 700;
+        margin: 50px auto;
+      }
+
+      #sweat_roulette > h2 {
+        margin: 65px auto 60px;
+      }
+
+      .intro {
+        max-width:40%;
+        min-width: 290px;
+        margin:auto;
+        padding:10px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      a.exercise {
+        display: block;
+        width:40%;
+        min-width: 290px;
+        padding:20px 0;
+        margin:20px auto;
+        color: #34495E;
+        border-radius: 4px;
+        background-color: #6BB9F0;
+        border: none;
+        text-align: center;
+      }
+
+      a.exercise:hover {
+        background-color: #6BB9FF;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="header">
+      <h1>Sweat Roulette!</h1>
+      <h2>Do it for as long as you can.</h2>
+    </div>
+
+    <div id="sweat_roulette">
+
+      <div class="intro">
+        <p>
+          The rules are simple. We pick an exercise, give it a secret countdown from 20 seconds to 1 minute. You do what you can for as long as you can. When one exercise finishes, another begins.
+        </p>
+        <p>
+          Getting fit has never been so damn easy. <br> <br> Welcome to #sweatroulette.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div id="button">
+      <a src="javascript:void(0);" onclick="startRoutine();" class="exercise start" />LET'S DO THIS!</a>
+    </div>
+
+    <audio id="audio_start" src="http://dev.interactive-creation-works.net/1/1.ogg" ></audio>
+    <audio id="audio_ding" src="http://dev.interactive-creation-works.net/1/1.ogg" ></audio>
+    <audio id="audio_stop" src="audio/computer_mercy.wav" ></audio>
+
+    <script>
+    var exercises,
+        workout,
+        timer,
+        rand,
+        seconds,
+        farewell,
+        farewell_message,
+        dothis = document.getElementById('sweat_roulette'),
+        button = document.getElementById('button'),
+        audioStart = document.getElementById('audio_start'),
+        audioDing = document.getElementById('audio_ding'),
+        audioStop = document.getElementById('audio_stop');
+
+    function generateExercise() {
+
+      exercises = [
+        'Push Ups',
+        'Squats',
+        'Sit Ups',
+        'Burpees',
+        'High Knees',
+        'Stretch',
+        'Star Jumps'
+      ];
+
+      workout = exercises[Math.floor(Math.random() * exercises.length)];
+
+      dothis.innerHTML = '<h1>' + workout + '</h1>';
+    }
+
+    function startRoutine(){
+
+      audioStart.play();
+
+      button.innerHTML = '<a src="#" onclick="stopRoutine();" class="exercise stop" />I\'m Done.</a>';
+
+      generateExercise();
+
+      function loop() {
+          rand = Math.round(Math.random() * (6000 - 2000)) + 2000;
+          seconds = Math.round(rand / 1000 % 60);
+
+          timer = setTimeout(function() {
+                  
+            generateExercise();
+            loop();
+
+          }, rand);
+      }
+
+      loop();
+
+    }
+
+    function stopRoutine() {
+
+      audioStart.pause();
+      audioStop.play();
+
+      button.innerHTML = '<a src="#" onclick="startRoutine();" class="exercise start" />Another round?</a>';
+
+      farewell_message = [
+        'Finished Already?!',
+        'Well you did better than the last guy.',
+        'See you tomorrow. Don\'t be late.',
+        'Just starting is the hardest bit.'
+      ];
+
+      farewell = farewell_message[Math.floor(Math.random() * farewell_message.length)];
+
+        clearTimeout(timer);
+        dothis.innerHTML = '<h2>' + farewell + '</h2>';
+    }
+
+    </script>
+
+  </body> 
+</html>
