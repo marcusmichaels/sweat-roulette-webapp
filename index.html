@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+
+    <title>Sweat Roulette</title>
+
+    <meta name="description" content="Do it for as long as you can. #SweatRoulette." />
+    <meta name="keywords" content="sweat, roulette, sweatroulette, training, workout, instant, tabata, HIIT, health, fitness, travel, crossfit" />
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Google Tracking [GitHub] -->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-52169454-1', 'marcusmichaels.github.io');
+      ga('send', 'pageview');
+
+    </script>
+
+    <style>
+
+      html,
+      body{
+        margin:0;
+        padding:0;
+        font-family: 'Oxygen', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        color: #22313F;
+        font-size: 20px;
+      }
+
+      .header{
+        width:100%;
+        text-align: center;
+        border-bottom: 1px solid #6BB9F0;
+        padding: 0 0 8px;
+        overflow: hidden;
+      }
+
+      h1, h2, h3 {
+        margin: 10px 0;
+        text-decoration: none;
+        font-weight: normal;
+      }
+
+      h1 {
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      h2.workout {
+        min-height: 173px;
+      }
+
+      h2.workout {
+        font-size: 160px;
+        font-weight: bold;
+        line-height: 150px;
+      }
+
+      h2.farewell {
+        min-height:113px;
+        font-size: 60px;
+        padding-top: 60px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      .intro {
+        min-height: 216px;
+      }
+
+      .wrap {
+        width:100%;
+      }
+
+      #sweat_roulette {
+        text-align: center;
+        font-size: 40px;
+        padding:20px;
+      }
+
+      #sweat_roulette > h1 {
+        font-weight: 700;
+        margin: 50px auto;
+      }
+
+      #sweat_roulette > h2 {
+        margin: 65px auto 60px;
+      }
+
+      .intro {
+        max-width:40%;
+        min-width: 290px;
+        margin:auto;
+        padding:40px 10px 42px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      a.exercise {
+        display: block;
+        width:40%;
+        min-width: 290px;
+        padding:20px 0;
+        margin:20px auto;
+        color: #34495E;
+        border-radius: 4px;
+        background-color: #6BB9F0;
+        border: none;
+        text-align: center;
+      }
+
+      a.exercise:hover {
+        background-color: #6BB9FF;
+      }
+
+      #music {
+        width: 118px;
+        text-align: center;
+        margin: auto;
+      }
+
+      .rewind-button,
+      .play-button,
+      .pause-button {
+        display: block;
+        float: left;
+      }
+
+      .rewind-button { 
+        font-size: 28px;
+      }
+
+      .play-button {
+        font-size: 40px;
+        margin: -4px 10px 0 16px;
+      }
+
+      .pause-button {
+        font-size: 18px;
+        margin-top: 10px;
+        letter-spacing: -2px;
+      }
+
+      .cred {
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        font-style: italic;
+        padding: 10px 0 0;
+        clear: left;
+      }
+
+      .cred a {
+        color: inherit;
+        padding: 1px 1px;
+        text-decoration: none;
+        border-bottom: 1px dotted #22313F;
+      }
+
+      .cred a:hover {
+        color: #FFF;
+        background-color: #22313F;
+        border-bottom: none;
+      }
+
+      @media screen and (max-width:1000px){
+        
+        h2.workout {
+          min-height: 93px;
+          padding-top: 80px;
+        }
+
+        h2.farewell {
+          min-height: 113px;
+          padding-top: 60px;
+        }
+
+        .intro {
+          min-height: 272px;
+          padding:10px 0 0;
+        }
+
+        h2.workout {
+          font-size: 60px;
+          line-height: 30px;
+        }
+        h2.farewell {
+          font-size: 40px;
+        }
+
+        .cred {
+          font-size: 9px;
+        }
+
+
+
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="header">
+      <h1>Sweat Roulette</h1>
+      <h2>Do it for as long as you can.</h2>
+    </div>
+
+    <div id="sweat_roulette">
+
+      <div class="intro">
+        <p>
+          The rules are simple. We give you an exercise for 20-60 seconds, then it'll change. You keep doing them as hard as you can for as long as you can. If you need a rest, skip one exercise.
+        </p>
+        <p>
+          Getting fit has never been so damn easy. <br> <br> Welcome to #sweatroulette.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div id="button">
+      <a src="javascript:void(0);" onclick="startRoutine();" class="exercise start" >LET'S DO THIS!</a>
+    </div>
+<!-- 
+    <div id="music">
+
+      <a src="javascript:void(0);" onclick="rewindMusic();" class="rewind-button">&#9668;&#9668;</a>
+      <a src="javascript:void(0);" onclick="playMusic();" class="play-button">&#9658;</a>
+      <a src="javascript:void(0);" onclick="audioMusic.pause();" class="pause-button">&#9616;&#9616;</a>
+      
+    </div> -->
+
+    <p class="cred">
+      <!-- Track by <a href="http://twitter.com/fantomenk" title="Follow Music Mastermind, FantomenK on Twitter"target="_blank">@FantomenK</a>. -->
+      <br><br>
+      A healthy project from <a href="http://twitter.com/" title="Follow Marcus on Twitter">@marcusmichaels</a> and <a href="http://twitter.com/beingcharlottex" title="Follow Charlotte on Twitter">@beingcharlottex</a>.</p>
+
+    <audio id="audio_start" src="audio/ding.mp3" src="ding.ogg"></audio>
+    <audio id="audio_next" src="audio/ding.mp3" src="audio/ding.ogg"></audio>
+    <audio id="audio_stop" src="audio/buzz.mp3" src="audio/buzz.ogg"></audio>
+
+
+    <script>
+    var exercises,
+        workout,
+        timer,
+        rand,
+        seconds,
+        farewell,
+        farewell_message,
+        dothis = document.getElementById('sweat_roulette'),
+        button = document.getElementById('button'),
+        audioStart = document.getElementById('audio_start'),
+        audioNext = document.getElementById('audio_next'),
+        audioStop = document.getElementById('audio_stop');
+
+    function generateExercise() {
+
+      exercises = [
+        'Push Ups',
+        'Squats',
+        'Sit Ups',
+        'Burpees',
+        'High Knees',
+        'Stretch',
+        'Star Jumps'
+      ];
+
+      workout = exercises[Math.floor(Math.random() * exercises.length)];
+
+      dothis.innerHTML = '<h2 class="workout">' + workout + '</h2>';
+
+      audioNext.pause();
+      audioNext.play();     
+
+    }
+
+    function startRoutine(){
+
+      button.innerHTML = '<a src="javascript:void(0);" onclick="stopRoutine();" class="exercise stop" >I\'m Done.</a>';
+
+      generateExercise();
+
+      function loop() {
+          rand = Math.round(Math.random() * (60000 - 20000)) + 20000;
+          seconds = Math.round(rand / 1000 % 60);
+
+          timer = setTimeout(function() {
+                  
+            generateExercise();
+            loop();
+
+          }, rand);
+      }
+
+      loop();
+
+    }
+
+    function stopRoutine() {
+
+      button.innerHTML = '<a src="javascript:void(0);" onclick="startRoutine();" class="exercise start" >Another round?</a>';
+
+      farewell_message = [
+        'Finished Already?!',
+        'Well you did better than the last guy.',
+        'See you tomorrow. Don\'t be late.',
+        'Just starting is the hardest bit.'
+      ];
+
+      farewell = farewell_message[Math.floor(Math.random() * farewell_message.length)];
+
+        clearTimeout(timer);
+        dothis.innerHTML = '<h2 class="farewell">' + farewell + '</h2>';
+
+      
+      audioStop.pause();
+      audioStop.play();
+    }
+
+    // function playMusic() {
+    //   if(!audioMusic.paused){
+    //     audioMusic.pause();
+    //   } else {
+    //     audioMusic.play();
+    //   }  
+    // }
+
+    // function rewindMusic() {
+    //   audioMusic.currentTime = 0;
+    // }
+
+    </script>
+
+  </body> 
+</html>
