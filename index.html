@@ -283,9 +283,11 @@
 
       workout = exercises[Math.floor(Math.random() * exercises.length)];
 
+      dothis.innerHTML = '<h2 class="workout">' + workout + '</h2>';
+      
       audioNext.currentTime = 0;
       audioNext.play();
-      dothis.innerHTML = '<h2 class="workout">' + workout + '</h2>';
+      
 
     }
 
