@@ -234,7 +234,7 @@
     </div>
 
     <div id="button">
-      <a src="javascript:void(0);" onclick="startRoutine();" class="exercise start" >LET'S DO THIS!</a>
+      <a href="#" onclick="startRoutine();" class="exercise start" >LET'S DO THIS!</a>
     </div>
 <!-- 
     <div id="music">
@@ -267,8 +267,7 @@
         button = document.getElementById('button'),
         audioStart = document.getElementById('audio_start'),
         audioNext = document.getElementById('audio_next'),
-        audioStop = document.getElementById('audio_stop'),
-        audioMusic = document.getElementById('audio_music');
+        audioStop = document.getElementById('audio_stop');
 
     function generateExercise() {
 
@@ -295,7 +294,7 @@
       // audioMusic.currentTime = 0;
       // audioMusic.play();
 
-      button.innerHTML = '<a src="javascript:void(0);" onclick="stopRoutine();" class="exercise stop" >I\'m Done.</a>';
+      button.innerHTML = '<a href="#" onclick="stopRoutine();" class="exercise stop" >I\'m Done.</a>';
 
       generateExercise();
 
@@ -319,10 +318,11 @@
 
       // audioMusic.pause();
       // audioStart.pause();
+
       audioStop.currentTime = 0;
       audioStop.play();
 
-      button.innerHTML = '<a src="#" onclick="startRoutine();" class="exercise start" >Another round?</a>';
+      button.innerHTML = '<a href="#" onclick="startRoutine();" class="exercise start" >Another round?</a>';
 
       farewell_message = [
         'Finished Already?!',
