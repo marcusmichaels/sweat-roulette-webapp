@@ -284,17 +284,13 @@
       workout = exercises[Math.floor(Math.random() * exercises.length)];
 
       dothis.innerHTML = '<h2 class="workout">' + workout + '</h2>';
-      
+
       audioNext.currentTime = 0;
-      audioNext.play();
-      
+      audioNext.play();     
 
     }
 
     function startRoutine(){
-
-      // audioMusic.currentTime = 0;
-      // audioMusic.play();
 
       button.innerHTML = '<a src="javascript:void(0);" onclick="stopRoutine();" class="exercise stop" >I\'m Done.</a>';
 
@@ -318,12 +314,6 @@
 
     function stopRoutine() {
 
-      // audioMusic.pause();
-      // audioStart.pause();
-
-      audioStop.currentTime = 0;
-      audioStop.play();
-
       button.innerHTML = '<a src="javascript:void(0);" onclick="startRoutine();" class="exercise start" >Another round?</a>';
 
       farewell_message = [
@@ -337,6 +327,9 @@
 
         clearTimeout(timer);
         dothis.innerHTML = '<h2 class="farewell">' + farewell + '</h2>';
+
+      audioStop.currentTime = 0;
+      audioStop.play();
     }
 
     function playMusic() {
