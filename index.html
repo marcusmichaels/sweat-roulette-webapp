@@ -162,7 +162,7 @@
         letter-spacing: -2px;
       }
 
-      .music-cred {
+      .cred {
         display: block;
         text-align: center;
         font-size: 12px;
@@ -171,14 +171,14 @@
         clear: left;
       }
 
-      .music-cred a {
+      .cred a {
         color: inherit;
         padding: 1px 1px;
         text-decoration: none;
         border-bottom: 1px dotted #22313F;
       }
 
-      .music-cred a:hover {
+      .cred a:hover {
         color: #FFF;
         background-color: #22313F;
         border-bottom: none;
@@ -208,6 +208,13 @@
         h2.farewell {
           font-size: 40px;
         }
+
+        .cred {
+          font-style: 10px;
+        }
+
+
+
       }
 
     </style>
@@ -245,7 +252,7 @@
       
     </div> -->
 
-    <p class="music-cred">
+    <p class="cred">
       <!-- Track by <a href="http://twitter.com/fantomenk" title="Follow Music Mastermind, FantomenK on Twitter"target="_blank">@FantomenK</a>. -->
       <br><br>
       A healthy project from <a href="http://twitter.com/" title="Follow Marcus on Twitter">@marcusmichaels</a> and <a href="http://twitter.com/beingcharlottex" title="Follow Charlotte on Twitter">@beingcharlottex</a>.</p>
@@ -285,8 +292,8 @@
 
       dothis.innerHTML = '<h2 class="workout">' + workout + '</h2>';
 
-      // audioNext.currentTime = 0;
       audioNext.pause();
+      audioNext.currentTime = 0;
       audioNext.play();     
 
     }
@@ -329,8 +336,9 @@
         clearTimeout(timer);
         dothis.innerHTML = '<h2 class="farewell">' + farewell + '</h2>';
 
-      // audioStop.currentTime = 0;
+      
       audioStop.pause();
+      audioStop.currentTime = 0;
       audioStop.play();
     }
 
