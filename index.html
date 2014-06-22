@@ -236,24 +236,24 @@
     <div id="button">
       <a src="javascript:void(0);" onclick="startRoutine();" class="exercise start" >LET'S DO THIS!</a>
     </div>
-
+<!-- 
     <div id="music">
 
       <a src="javascript:void(0);" onclick="rewindMusic();" class="rewind-button">&#9668;&#9668;</a>
       <a src="javascript:void(0);" onclick="playMusic();" class="play-button">&#9658;</a>
       <a src="javascript:void(0);" onclick="audioMusic.pause();" class="pause-button">&#9616;&#9616;</a>
       
-    </div>
+    </div> -->
 
     <p class="music-cred">
-      Track by <a href="http://twitter.com/fantomenk" title="Follow Music Mastermind, FantomenK on Twitter"target="_blank">@FantomenK</a>.
+      <!-- Track by <a href="http://twitter.com/fantomenk" title="Follow Music Mastermind, FantomenK on Twitter"target="_blank">@FantomenK</a>. -->
       <br><br>
       A healthy project from <a href="http://twitter.com/" title="Follow Marcus on Twitter">@marcusmichaels</a> and <a href="http://twitter.com/beingcharlottex" title="Follow Charlotte on Twitter">@beingcharlottex</a>.</p>
 
     <audio id="audio_start" src="audio/ding.mp3" src="ding.ogg"></audio>
     <audio id="audio_next" src="audio/ding.mp3" src="audio/ding.ogg"></audio>
     <audio id="audio_stop" src="audio/buzz.mp3" src="audio/buzz.ogg"></audio>
-    <audio id="audio_music" src="audio/music.mp3" src="audio/music.ogg"></audio>
+
 
     <script>
     var exercises,
@@ -292,8 +292,8 @@
 
     function startRoutine(){
 
-      audioMusic.currentTime = 0;
-      audioMusic.play();
+      // audioMusic.currentTime = 0;
+      // audioMusic.play();
 
       button.innerHTML = '<a src="#" onclick="stopRoutine();" class="exercise stop" >I\'m Done.</a>';
 
@@ -317,8 +317,8 @@
 
     function stopRoutine() {
 
-      audioMusic.pause();
-      audioStart.pause();
+      // audioMusic.pause();
+      // audioStart.pause();
       audioStop.currentTime = 0;
       audioStop.play();
 
