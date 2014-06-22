@@ -286,6 +286,7 @@
       dothis.innerHTML = '<h2 class="workout">' + workout + '</h2>';
 
       // audioNext.currentTime = 0;
+      audioNext.pause();
       audioNext.play();     
 
     }
@@ -329,20 +330,21 @@
         dothis.innerHTML = '<h2 class="farewell">' + farewell + '</h2>';
 
       // audioStop.currentTime = 0;
+      audioStop.pause();
       audioStop.play();
     }
 
-    function playMusic() {
-      if(!audioMusic.paused){
-        audioMusic.pause();
-      } else {
-        audioMusic.play();
-      }  
-    }
+    // function playMusic() {
+    //   if(!audioMusic.paused){
+    //     audioMusic.pause();
+    //   } else {
+    //     audioMusic.play();
+    //   }  
+    // }
 
-    function rewindMusic() {
-      audioMusic.currentTime = 0;
-    }
+    // function rewindMusic() {
+    //   audioMusic.currentTime = 0;
+    // }
 
     </script>
 
