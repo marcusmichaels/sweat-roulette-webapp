@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <meta charset="UTF-8">
+
     <title>Sweat Roulette</title>
+
+    <meta name="description" content="Sweat Roulette" />
+    <meta name="keywords" content="sweat, roulette, sweatroulette, training, workout, instant, tabata, HIIT, health, fitness, travel, crossfit" />
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 
@@ -25,10 +36,46 @@
         overflow: hidden;
       }
 
-      h1, h2 {
+      h1, h2, h3 {
         margin: 10px 0;
         text-decoration: none;
         font-weight: normal;
+      }
+
+      h1 {
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      h2.workout {
+        min-height: 173px;
+      }
+
+      h2.workout {
+        font-size: 160px;
+        font-weight: bold;
+        line-height: 150px;
+      }
+
+      h2.farewell {
+        min-height:113px;
+        font-size: 60px;
+        padding-top: 60px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      .intro {
+        min-height: 216px;
+      }
+
+      .wrap {
+        width:100%;
       }
 
       #sweat_roulette {
@@ -50,8 +97,8 @@
         max-width:40%;
         min-width: 290px;
         margin:auto;
-        padding:10px;
-        font-size: 20px;
+        padding:40px 10px 42px;
+        font-size: 16px;
         letter-spacing: 1px;
         line-height: 24px;
         text-align: center;
@@ -74,12 +121,88 @@
         background-color: #6BB9FF;
       }
 
+      #music {
+        width: 118px;
+        text-align: center;
+        margin: auto;
+      }
+
+      .rewind-button,
+      .play-button,
+      .pause-button {
+        display: block;
+        float: left;
+      }
+
+      .rewind-button { 
+        font-size: 28px;
+      }
+
+      .play-button {
+        font-size: 40px;
+        margin: -4px 10px 0 16px;
+      }
+
+      .pause-button {
+        font-size: 18px;
+        margin-top: 10px;
+        letter-spacing: -2px;
+      }
+
+      .music-cred {
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        font-style: italic;
+        padding: 10px 0 0;
+        clear: left;
+      }
+
+      .music-cred a {
+        color: inherit;
+        padding: 1px 1px;
+        text-decoration: none;
+        border-bottom: 1px dotted #22313F;
+      }
+
+      .music-cred a:hover {
+        color: #FFF;
+        background-color: #22313F;
+        border-bottom: none;
+      }
+
+      @media screen and (max-width:1000px){
+        
+        h2.workout {
+          min-height: 93px;
+          padding-top: 80px;
+        }
+
+        h2.farewell {
+          min-height: 113px;
+          padding-top: 60px;
+        }
+
+        .intro {
+          min-height: 272px;
+          padding:10px 10px 0;
+        }
+
+        h2.workout {
+          font-size: 60px;
+          line-height: 30px;
+        }
+        h2.farewell {
+          font-size: 40px;
+        }
+      }
+
     </style>
 
   </head>
   <body>
     <div class="header">
-      <h1>Sweat Roulette!</h1>
+      <h1>Sweat Roulette</h1>
       <h2>Do it for as long as you can.</h2>
     </div>
 
@@ -98,12 +221,26 @@
     </div>
 
     <div id="button">
-      <a src="javascript:void(0);" onclick="startRoutine();" class="exercise start" />LET'S DO THIS!</a>
+      <a src="javascript:void(0);" onclick="startRoutine();" class="exercise start" >LET'S DO THIS!</a>
     </div>
 
-    <audio width="0" height="0" id="audio_start"><source src="audio/computer_mercy.mp3" type="audio/mpeg" /><source src="audio/computer_mercy.ogg" type="audio/ogg" /></audio>
-    <audio id="audio_ding" src="http://dev.interactive-creation-works.net/1/1.ogg" ></audio>
-    <audio id="audio_stop" src="audio/computer_mercy.mp3" src="audio/computer_mercy.wav" ></audio>
+    <div id="music">
+
+      <a src="javascript:void(0);" onclick="rewindMusic();" class="rewind-button">&#9668;&#9668;</a>
+      <a src="javascript:void(0);" onclick="playMusic();" class="play-button">&#9658;</a>
+      <a src="javascript:void(0);" onclick="audioMusic.pause();" class="pause-button">&#9616;&#9616;</a>
+      
+    </div>
+
+    <p class="music-cred">
+      Track by <a href="http://twitter.com/fantomenk" title="Follow Music Mastermind, FantomenK on Twitter"target="_blank">@FantomenK</a>.
+      <br><br>
+      A healthy project from <a href="http://twitter.com/" title="Follow Marcus on Twitter">@marcusmichaels</a> and <a href="http://twitter.com/beingcharlottex" title="Follow Charlotte on Twitter">@beingcharlottex</a>.</p>
+
+    <audio id="audio_start" src="audio/ding.mp3" src="ding.ogg"></audio>
+    <audio id="audio_next" src="audio/ding.mp3" src="audio/ding.ogg"></audio>
+    <audio id="audio_stop" src="audio/buzz.mp3" src="audio/buzz.ogg"></audio>
+    <audio id="audio_music" src="audio/music.mp3" src="audio/music.ogg"></audio>
 
     <script>
     var exercises,
@@ -116,8 +253,9 @@
         dothis = document.getElementById('sweat_roulette'),
         button = document.getElementById('button'),
         audioStart = document.getElementById('audio_start'),
-        audioDing = document.getElementById('audio_ding'),
-        audioStop = document.getElementById('audio_stop');
+        audioNext = document.getElementById('audio_next'),
+        audioStop = document.getElementById('audio_stop'),
+        audioMusic = document.getElementById('audio_music');
 
     function generateExercise() {
 
@@ -133,14 +271,18 @@
 
       workout = exercises[Math.floor(Math.random() * exercises.length)];
 
-      dothis.innerHTML = '<h1>' + workout + '</h1>';
+      audioNext.currentTime = 0;
+      audioNext.play();
+      dothis.innerHTML = '<h2 class="workout">' + workout + '</h2>' ;
+
     }
 
     function startRoutine(){
 
-      audioStart.play();
+      audioMusic.currentTime = 0;
+      audioMusic.play();
 
-      button.innerHTML = '<a src="#" onclick="stopRoutine();" class="exercise stop" />I\'m Done.</a>';
+      button.innerHTML = '<a src="#" onclick="stopRoutine();" class="exercise stop" >I\'m Done.</a>';
 
       generateExercise();
 
@@ -162,10 +304,12 @@
 
     function stopRoutine() {
 
+      audioMusic.pause();
       audioStart.pause();
+      audioStop.currentTime = 0;
       audioStop.play();
 
-      button.innerHTML = '<a src="#" onclick="startRoutine();" class="exercise start" />Another round?</a>';
+      button.innerHTML = '<a src="#" onclick="startRoutine();" class="exercise start" >Another round?</a>';
 
       farewell_message = [
         'Finished Already?!',
@@ -177,7 +321,19 @@
       farewell = farewell_message[Math.floor(Math.random() * farewell_message.length)];
 
         clearTimeout(timer);
-        dothis.innerHTML = '<h2>' + farewell + '</h2>';
+        dothis.innerHTML = '<h2 class="farewell">' + farewell + '</h2>';
+    }
+
+    function playMusic() {
+      if(!audioMusic.paused){
+        audioMusic.pause();
+      } else {
+        audioMusic.play();
+      }  
+    }
+
+    function rewindMusic() {
+      audioMusic.currentTime = 0;
     }
 
     </script>
