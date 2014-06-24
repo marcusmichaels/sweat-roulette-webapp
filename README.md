@@ -14,3 +14,6 @@ Feedback and pull requests are very welcome - here's the functionality we're wor
 - Rest Intervals after every one or two exercises
 - Music Player (already part developed and working on Desktop but not Mobile. Music usage has been kindly granted by @fantomenk)
 
+Latest stable release here: http://sweatroulette.com
+
+Latest beta releases here: http://marcusmichaels.github.io/sweat-roulette
