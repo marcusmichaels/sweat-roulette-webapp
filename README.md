@@ -12,7 +12,7 @@ Feedback and pull requests are very welcome - here's the functionality we're wor
 - Timer
 - Exercise Instructions (likely to be animated GIF images)
 - Rest Intervals after every one or two exercises
-- Music Player (already part developed and working on Desktop but not Mobile. Music usage has been kindly granted by @fantomenk)
+- Music Player (already part developed and it's working on desktop but not mobile. Music usage has kindly been granted by @fantomenk)
 
 Latest stable release here: http://sweatroulette.com
 
