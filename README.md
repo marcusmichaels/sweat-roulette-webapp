@@ -1,5 +1,14 @@
-Sweat Roulette
-==============
+Sweat Roulette v1.1
+===================
+
+- Added Round Counter
+- Added 20s rest interval after every exercise
+- Added share button to post round count to Twitter 
+
+======================================================================
+
+Sweat Roulette v1.0
+===================
 
 A healthy project by @marcusmichaels and @beingcharlotte.
 
@@ -11,7 +20,7 @@ Feedback and pull requests are very welcome - here's the functionality we're wor
 
 - Timer
 - Exercise Instructions (likely to be animated GIF images)
-- Rest Intervals after every one or two exercises [ADDED]
+- Rest Intervals after every one or two exercises
 - Music Player (already part developed and it's working on desktop but not mobile. Music usage has kindly been granted by @fantomenk)
 
 Latest stable release here: http://sweatroulette.com
