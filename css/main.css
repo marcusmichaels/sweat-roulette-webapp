@@ -32,23 +32,32 @@ h2 {
 
 h2.workout {
   min-height: 173px;
-}
-
-h2.workout {
   font-size: 160px;
   font-weight: bold;
   line-height: 150px;
 }
 
 h2.farewell {
-  min-height:113px;
   font-size: 60px;
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 h3 {
   font-size: 18px;
 }
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+  padding: 1px 1px;
+  border-bottom: 1px dotted #22313F;
+}
+
+a:hover {
+  border: none;
+}
+
 
 .intro {
   min-height: 216px;
@@ -99,6 +108,22 @@ a.exercise {
 
 a.exercise:hover {
   background-color: #6BB9FF;
+}
+
+.rounds {
+  font-size: 22px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+a.tweet {
+  padding: 10px 0;
+  color: #4099FF;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  border: none;
 }
 
 #music {
