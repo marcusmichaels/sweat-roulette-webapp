@@ -1,0 +1,208 @@
+html,
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Oxygen', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #22313F;
+  font-size: 20px;
+}
+
+.header{
+  width:100%;
+  text-align: center;
+  border-bottom: 1px solid #6BB9F0;
+  padding: 0 0 8px;
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  margin: 10px 0;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h2.workout {
+  min-height: 173px;
+  font-size: 160px;
+  font-weight: bold;
+  line-height: 150px;
+}
+
+h2.farewell {
+  font-size: 60px;
+  padding-top: 30px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+  padding: 1px 1px;
+  border-bottom: 1px dotted #22313F;
+}
+
+a:hover {
+  border: none;
+}
+
+
+.intro {
+  min-height: 216px;
+}
+
+.wrap {
+  width:100%;
+}
+
+#sweat_roulette {
+  text-align: center;
+  font-size: 40px;
+  padding:20px;
+}
+
+#sweat_roulette > h1 {
+  font-weight: 700;
+  margin: 50px auto;
+}
+
+#sweat_roulette > h2 {
+  margin: 65px auto 60px;
+}
+
+.intro {
+  max-width:40%;
+  min-width: 290px;
+  margin:auto;
+  padding:40px 10px 42px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-align: center;
+}
+
+a.exercise {
+  display: block;
+  width:40%;
+  min-width: 290px;
+  padding:20px 0;
+  margin:20px auto;
+  color: #34495E;
+  border-radius: 4px;
+  background-color: #6BB9F0;
+  border: none;
+  text-align: center;
+}
+
+a.exercise:hover {
+  background-color: #6BB9FF;
+}
+
+.rounds {
+  font-size: 22px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+a.tweet {
+  padding: 10px 0;
+  color: #4099FF;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  border: none;
+}
+
+#music {
+  width: 118px;
+  text-align: center;
+  margin: auto;
+}
+
+.rewind-button,
+.play-button,
+.pause-button {
+  display: block;
+  float: left;
+}
+
+.rewind-button { 
+  font-size: 28px;
+}
+
+.play-button {
+  font-size: 40px;
+  margin: -4px 10px 0 16px;
+}
+
+.pause-button {
+  font-size: 18px;
+  margin-top: 10px;
+  letter-spacing: -2px;
+}
+
+.cred {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+  padding: 10px 0 0;
+  clear: left;
+}
+
+.cred a {
+  color: inherit;
+  padding: 1px 1px;
+  text-decoration: none;
+  border-bottom: 1px dotted #22313F;
+}
+
+.cred a:hover {
+  color: #FFF;
+  background-color: #22313F;
+  border-bottom: none;
+}
+
+@media screen and (max-width:1000px){
+  
+  h2.workout {
+    min-height: 93px;
+    padding-top: 80px;
+  }
+
+  h2.farewell {
+    min-height: 113px;
+    padding-top: 60px;
+  }
+
+  .intro {
+    min-height: 272px;
+    padding:10px 0 0;
+  }
+
+  h2.workout {
+    font-size: 60px;
+    line-height: 30px;
+  }
+  h2.farewell {
+    font-size: 40px;
+  }
+
+  .cred {
+    font-size: 9px;
+  }
+
+}
