@@ -80,7 +80,7 @@ function startRoutine(){
     restTimer = setTimeout(
       function(){
         loop();
-      }, 1000);
+      }, 600);
   }
 
   loop();
