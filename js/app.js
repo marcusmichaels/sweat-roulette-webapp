@@ -27,7 +27,6 @@ function generateExercise() {
     'Sit Ups',
     'Burpees',
     'High Knees',
-    'Stretch',
     'Star Jumps',
     'Side Plank',
     'Plank'
@@ -81,7 +80,7 @@ function startRoutine(){
     restTimer = setTimeout(
       function(){
         loop();
-      }, 20000);
+      }, 10000);
   }
 
   loop();
