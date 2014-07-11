@@ -50,29 +50,26 @@ function startRoutine(){
   generateExercise();
 
   function loop() {
-    rand = Math.round(Math.random() * (60000 - 20000)) + 20000;
+    rand = Math.round(Math.random() * (40000 - 20000)) + 20000;
     seconds = Math.round(rand / 1000 % 60);
 
-    timer = setTimeout(function() {
+    count++;
+    generateExercise();
+
+    if(count % 2 === 0) {
+
+      totalrounds++;
+      console.log('Round ' + totalrounds);
+      restLoop();
+        
+    } else {
       
-      count++;
-      generateExercise();
-
-      if(count % 2 === 0){
-
+      timer = setTimeout(function() {
         loop();
-
-      } else {
-
-        totalrounds++;
-        console.log('Round ' + totalrounds);
-        restLoop();
-
-      }
-
-    }, rand);
+      }, rand);
+    }
   }
-
+        
   function restLoop() { 
 
     dothis.innerHTML = '<h2 class="workout">Rest</h2>';
@@ -80,7 +77,7 @@ function startRoutine(){
     restTimer = setTimeout(
       function(){
         loop();
-      }, 600);
+      }, 10000);
   }
 
   loop();
