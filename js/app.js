@@ -79,8 +79,9 @@ function startRoutine(){
 
     restTimer = setTimeout(
       function(){
+        dothis.innerHTML = '<h2 class="workout">' + workout + '</h2>';
         loop();
-      }, 600);
+      }, 1000);
   }
 
   loop();
