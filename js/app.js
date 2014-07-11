@@ -57,6 +57,7 @@ function startRoutine(){
       
       count++;
       generateExercise();
+      clearTimeout(restTimer);
 
       if(count % 2 === 0){
 
@@ -77,6 +78,7 @@ function startRoutine(){
 
     dothis.innerHTML = '<h2 class="workout">Rest</h2>';
 
+    clearTimeout(timer);
     restTimer = setTimeout(
       function(){
         loop();
