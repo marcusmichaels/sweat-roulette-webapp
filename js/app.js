@@ -10,7 +10,7 @@ var exercises,
     farewell_message,
     totalrounds,
     dothis = document.getElementById('sweat_roulette'),
-    button = document.getElementById('button'),
+    button = document.getElementsByClassName('button exercise')[0],
     audioStart = document.getElementById('audio_start'),
     audioNext = document.getElementById('audio_next'),
     audioStop = document.getElementById('audio_stop');
@@ -45,7 +45,7 @@ function startRoutine(){
   count = 0;
   totalrounds = 0;
 
-  button.innerHTML = '<a src="javascript:void(0);" onclick="stopRoutine();" class="exercise stop" >I\'m Done.</a>';
+  setButton("I'm done.", "exercise stop", stopRoutine);
 
   generateExercise();
 
@@ -86,7 +86,7 @@ function startRoutine(){
 
 function stopRoutine() {
 
-  button.innerHTML = '<a src="javascript:void(0);" onclick="startRoutine();" class="exercise start" >Another round?</a>';
+  setButton("Another round?", "exercise start", startRoutine);
 
   farewell_message = [
     'Finished Already?!',
@@ -108,8 +108,13 @@ function stopRoutine() {
 
 }
 
+function setButton(text, classes, clickHandler){
+  button.className = "button " + classes;
+  button.onclick = clickHandler;
+  button.innerHTML = text;
+}
 
-
+button.onclick = startRoutine; // set the initial function of the button
 // function playMusic() {
 //   if(!audioMusic.paused){
 //     audioMusic.pause();
