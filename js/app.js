@@ -100,7 +100,7 @@ function stopRoutine() {
     clearTimeout(timer);
     clearTimeout(restTimer);
 
-    dothis.innerHTML = '<h2 class="farewell">' + farewell + '</h2><div class="rounds"> <p>You lasted ' + totalrounds + ' rounds<br>' + tweetStart + totalrounds + tweetEnd + '</p></div>';
+    dothis.innerHTML = '<h2 class="farewell">' + farewell + '</h2><div class="rounds"> <p>You lasted ' + totalrounds + ' round' + (totalrounds === 1 ? '' : 's') + '<br>' + tweetStart + totalrounds + tweetEnd + '</p></div>';
 
   
   audioStop.pause();
