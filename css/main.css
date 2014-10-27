@@ -93,7 +93,7 @@ a:hover {
   text-align: center;
 }
 
-a.exercise {
+.button.exercise {
   display: block;
   width:40%;
   min-width: 290px;
@@ -106,7 +106,8 @@ a.exercise {
   text-align: center;
 }
 
-a.exercise:hover {
+.button.exercise:hover {
+  cursor: pointer;
   background-color: #6BB9FF;
 }
 
