@@ -23,7 +23,7 @@ Feedback and pull requests are very welcome - here's the functionality we're wor
 
 Latest stable release here: https://sweatroulette.com
 
-Latest beta releases here: https://marcusmichaels.github.io/sweat-roulette
+Latest beta releases here: https://marcusmichaels.com/sweat-roulette-webapp
 
 ==============
 
